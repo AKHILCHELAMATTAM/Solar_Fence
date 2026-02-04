@@ -892,3 +892,42 @@ https://templatemo.com/tm-609-crypto-vault
         flex-direction: column;
     }
 }
+
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-left {
+        width: 100%;
+    }
+
+    .header-text h2 {
+        font-size: 16px;
+    }
+
+    .header-rightclock {
+        width: 100%;
+        font-size: 12px;
+        text-align: left;
+        opacity: 0.8;
+    }
+}
+
+/* 📱 Small Mobile */
+@media (max-width: 480px) {
+    .header-text h2 {
+        font-size: 15px;
+    }
+
+    .header-text p {
+        font-size: 12px;
+    }
+
+    .header-icon {
+        font-size: 24px;
+    }
+}
