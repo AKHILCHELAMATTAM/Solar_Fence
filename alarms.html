@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/alarms.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
     
     
@@ -184,61 +186,78 @@
             <!-- Maps Content -->
             <div> <footer class="copyright"></footer>
 
-                <div class="alarm-container">
-                    <!-- Header -->
-                    <div class="alarm-header">
-                        <h2>ALARM</h2>
-                        <nav class="breadcrumb">
-                        <a href="#">Dashboard</a> / <span>Alarms</span>
+                <div class="container-fluid alarm-container py-3">
+
+    <!-- Header -->
+                    <div class="alarm-header mb-4">
+                        <h2 class="fw-bold">ALARM</h2>
+                        <nav class="breadcrumb mb-0">
+                            <a class="breadcrumb-item" href="#">Dashboard</a>
+                            <span class="breadcrumb-item active">Alarms</span>
                         </nav>
                     </div>
 
                     <!-- Search Filters -->
-                    <div class="search-filters">
-                        <div class="filter-group">
-                        <label>Device ID Search</label>
-                        <input type="text" placeholder="Device ID search..." />
+                    <div class="row g-3 align-items-end mb-4 search-filters">
+                        <div class="col-12 col-md-3">
+                            <label class="form-label">Device ID Search</label>
+                            <input type="text" class="form-control" placeholder="Device ID search..." />
                         </div>
-                        <div class="filter-group">
-                        <label>Start Date</label>
-                        <input type="text" placeholder="mm/dd/yyyy" />
+
+                        <div class="col-12 col-md-3">
+                            <label class="form-label">Start Date</label>
+                            <input type="date" class="form-control" />
                         </div>
-                        <div class="filter-group">
-                        <label>End Date</label>
-                        <input type="text" placeholder="mm/dd/yyyy" />
+
+                        <div class="col-12 col-md-3">
+                            <label class="form-label">End Date</label>
+                            <input type="date" class="form-control" />
                         </div>
-                        <button class="search-btn">Search</button>
+
+                        <div class="col-12 col-md-3 d-grid">
+                            <button class="btn btn-primary search-btn">Search</button>
+                        </div>
                     </div>
 
-                    <!-- Table Header -->
-                    <div class="table-header">
-                        <div class="col">Sno</div>
-                        <div class="col">DeviceId</div>
-                        <div class="col">Last Triggered At</div>
-                        <div class="col">Message</div>
-                        <div class="col">Recipients</div>
-                        <div class="col">Triggered Data</div>
-                        <div class="col">Status</div>
-                    </div>
-
-                    <!-- Empty State -->
-                    <div class="empty-state">
-                        <div class="icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"/>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                        </svg>
-                        </div>
-                        <h3>Sorry! No Result Found</h3>
-                        <p>Try adjusting filters or search.</p>
+                    <!-- Table -->
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle text-nowrap">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Sno</th>
+                                    <th>DeviceId</th>
+                                    <th>Last Triggered At</th>
+                                    <th>Message</th>
+                                    <th>Recipients</th>
+                                    <th>Triggered Data</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Empty State -->
+                                <tr>
+                                    <td colspan="7" class="text-center py-5">
+                                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" class="mb-2 text-muted">
+                                            <circle cx="11" cy="11" r="8" />
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                        </svg>
+                                        <h5 class="mt-2">Sorry! No Result Found</h5>
+                                        <p class="text-muted mb-0">Try adjusting filters or search.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <!-- Pagination -->
-                    <div class="pagination">
-                        <button class="page-btn disabled">Previous</button>
-                        <button class="page-btn">Next</button>
+                    <div class="d-flex justify-content-end gap-2 mt-3 pagination">
+                        <button class="btn btn-outline-secondary disabled">Previous</button>
+                        <button class="btn btn-outline-primary">Next</button>
                     </div>
-                    </div>
+
+                </div>
+
                 
 
         
