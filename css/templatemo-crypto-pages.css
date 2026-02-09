@@ -34,7 +34,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .balance-card.primary {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border: none;
 }
 
@@ -112,13 +112,13 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .action-btn.primary {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border: none;
     color: #1c1c1e;
 }
 
 .action-btn.primary:hover {
-    background: var(--accent-gradient-hover);
+    /* background: var(--accent-gradient-hover); */
     transform: translateY(-2px);
 }
 
@@ -281,7 +281,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .qr-btn.primary {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border: none;
     color: #1c1c1e;
 }
@@ -369,7 +369,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .staking-btn:hover {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     color: #1c1c1e;
     border-color: transparent;
 }
@@ -570,7 +570,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .filter-tab.active {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     color: #1c1c1e;
     border: none;
 }
@@ -825,7 +825,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .settings-tab.active {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     color: #1c1c1e;
 }
 
@@ -853,7 +853,7 @@ https://templatemo.com/tm-609-crypto-vault
 .profile-avatar {
     width: 100px;
     height: 100px;
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -885,7 +885,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .avatar-edit:hover {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border-color: transparent;
 }
 
@@ -908,7 +908,7 @@ https://templatemo.com/tm-609-crypto-vault
 .profile-badge {
     display: inline-block;
     padding: 4px 12px;
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
@@ -981,7 +981,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .security-btn.primary {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border: none;
     color: #1c1c1e;
 }

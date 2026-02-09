@@ -99,7 +99,7 @@ https://templatemo.com/tm-609-crypto-vault
     right: -4px;
     width: 20px;
     height: 20px;
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border-radius: 50%;
     font-size: 11px;
     font-weight: 600;
@@ -128,7 +128,7 @@ https://templatemo.com/tm-609-crypto-vault
 .user-avatar {
     width: 38px;
     height: 38px;
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -204,7 +204,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .stat-card.primary {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border: none;
 }
 
@@ -299,7 +299,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .chart-tab.active {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     color: #1c1c1e;
 }
 
@@ -511,7 +511,7 @@ https://templatemo.com/tm-609-crypto-vault
 }
 
 .movers-tab.active {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     color: #1c1c1e;
 }
 

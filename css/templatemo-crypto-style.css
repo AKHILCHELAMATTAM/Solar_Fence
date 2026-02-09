@@ -33,8 +33,8 @@ https://templatemo.com/tm-609-crypto-vault
     --bg-card-hover: #343436;
     --accent-copper: #b87333;
     --accent-copper-light: #c9845a;
-    --accent-gradient: linear-gradient(135deg, #b87333 0%, #d4945a 50%, #c9845a 100%);
-    --accent-gradient-hover: linear-gradient(135deg, #c9845a 0%, #daa57a 50%, #d4945a 100%);
+    /* --accent-gradient: linear-gradient(135deg, #b87333 0%, #d4945a 50%, #c9845a 100%);
+    --accent-gradient-hover: linear-gradient(135deg, #c9845a 0%, #daa57a 50%, #d4945a 100%); */
     --text-primary: #f5f0e8;
     --text-secondary: #a8a8a8;
     --text-muted: #6e6e6e;
@@ -56,8 +56,8 @@ https://templatemo.com/tm-609-crypto-vault
     --bg-card-hover: #f0f0f2;
     --accent-copper: #d4945a;
     --accent-copper-light: #e8b88a;
-    --accent-gradient: linear-gradient(135deg, #d4945a 0%, #e8b88a 50%, #f0c89a 100%);
-    --accent-gradient-hover: linear-gradient(135deg, #e8b88a 0%, #f0c89a 50%, #f5d4a8 100%);
+    /* --accent-gradient: linear-gradient(135deg, #d4945a 0%, #e8b88a 50%, #f0c89a 100%);
+    --accent-gradient-hover: linear-gradient(135deg, #e8b88a 0%, #f0c89a 50%, #f5d4a8 100%); */
     --text-primary: #1c1c1e;
     --text-secondary: #6e6e6e;
     --text-muted: #9a9a9a;
@@ -219,7 +219,7 @@ body {
 .logo-icon {
     width: 42px;
     height: 42px;
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -270,14 +270,14 @@ body {
 }
 
 .nav-item.active {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     color: #1c1c1e;
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(184, 115, 51, 0.3);
 }
 
 .nav-item.active:hover {
-    background: var(--accent-gradient-hover);
+    /* background: var(--accent-gradient-hover); */
 }
 
 .nav-icon {
@@ -339,7 +339,7 @@ body {
 }
 
 [data-theme="light"] .theme-switch {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
 }
 
 [data-theme="light"] .theme-switch::after {
@@ -468,13 +468,13 @@ body {
 }
 
 .btn.primary {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border: none;
     color: #1c1c1e;
 }
 
 .btn.primary:hover {
-    background: var(--accent-gradient-hover);
+    /* background: var(--accent-gradient-hover); */
     transform: translateY(-2px);
 }
 
@@ -614,7 +614,7 @@ body {
 }
 
 .toggle-switch.active {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
 }
 
 .toggle-switch.active::after {

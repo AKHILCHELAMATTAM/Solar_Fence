@@ -18,7 +18,7 @@ body.auth-page {
 ======================================== */
 .auth-branding {
     flex: 1;
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,7 +249,7 @@ body.auth-page {
 }
 
 .auth-tab.active {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     color: #1c1c1e;
 }
 
@@ -334,7 +334,7 @@ body.auth-page {
 }
 
 .checkbox.checked {
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border-color: var(--accent-copper);
 }
 
@@ -511,7 +511,7 @@ body.auth-page {
 .success-icon {
     width: 80px;
     height: 80px;
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border-radius: 50%;
     display: flex;
     align-items: center;
