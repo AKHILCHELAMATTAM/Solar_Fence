@@ -172,6 +172,52 @@ body.auth-page {
     font-size: 16px;
     color: var(--text-secondary);
 }
+.form-logo {
+    width: 80px;        /* adjust size */
+    height: auto;
+    margin-bottom: 10px;
+}
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Logo default */
+/* .form-logo {
+    width: 60px;
+    height: auto;
+} */
+
+/* Mobile view */
+@media (max-width: 576px) {
+    .form-header {
+        flex-direction: column;
+    }
+
+    .form-logo {
+        width: 70px;
+    }
+
+    .form-header h1 {
+        font-size: 22px;
+    }
+}
+
+/* Tablet and up */
+@media (min-width: 577px) {
+    .form-header {
+        flex-direction: row;
+    }
+
+    .form-header h1 {
+        font-size: 28px;
+    }
+}
+
 
 /* ========================================
    Auth Tabs
@@ -324,7 +370,7 @@ body.auth-page {
 .submit-btn {
     width: 100%;
     padding: 16px;
-    background: var(--accent-gradient);
+    /* background: var(--accent-gradient); */
     border: none;
     border-radius: 12px;
     font-size: 16px;
@@ -337,9 +383,9 @@ body.auth-page {
 }
 
 .submit-btn:hover {
-    background: var(--accent-gradient-hover);
+    /* background: var(--accent-gradient-hover); */
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(184, 115, 51, 0.3);
+    box-shadow: 0 8px 24px rgba(88, 12, 221, 0.3);
 }
 
 /* ========================================
