@@ -1080,7 +1080,7 @@ https://templatemo.com/tm-609-crypto-vault
     .settings-tabs {
         flex-direction: column;
         border-bottom: none;
-        background-color: var(--bg-card);
+        /* background-color: var(--bg-card); */
         border-radius: 12px;
         padding: 8px;
     }
