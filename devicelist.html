@@ -108,7 +108,145 @@
   background: #0d6efd;
   color: #fff;
 }
+/* Modal */
+/* Clickable link */
+.device-link {
+  color: #1a73e8;
+  cursor: pointer;
+  font-weight: 500;
+}
+.device-link:hover {
+  text-decoration: underline;
+}
 
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 1100px;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Dashboard grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #f8f9fb;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card strong {
+  font-size: 22px;
+  color: #1a73e8;
+}
+.dashboard-modal {
+  max-width: 1200px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.dash-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.dash-card h4 {
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.big-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #4f6bed;
+}
+
+/* Battery */
+.battery {
+  width: 100%;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.battery-fill {
+  height: 100%;
+  background: #f4c430;
+}
+
+/* Meter circle */
+.meter-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px solid #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: auto;
+}
+
+/* Status */
+.status-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+}
+
+.status-circle.on {
+  background: #3f51b5;
+}
+
+.center {
+  text-align: center;
+}
+
+.mode {
+  font-size: 26px;
+  font-weight: bold;
+  color: #3f51b5;
+}
 </style>
     
     
@@ -286,7 +424,7 @@
                         <tbody>
                             <tr>
                             <td>1</td>
-                            <td class="link">KLCLT001</td>
+                            <td class="link device-link" data-device="KLCLT001">KLCLT001</td>
                             <td>Fence</td>
                             <td>KLCLT001</td>
                             <td>NA</td>
@@ -299,7 +437,7 @@
 
                             <tr>
                             <td>2</td>
-                            <td class="link">KLCLT002</td>
+                            <td class="link device-link" data-device="KLCLT002">KLCLT002</td>
                             <td>Fence</td>
                             <td>KLCLT002</td>
                             <td>NA</td>
@@ -334,6 +472,82 @@
         </main>
     </div>
 
+
+<!-- Modal -->
+<!-- Device Modal -->
+<div id="deviceModal" class="modal">
+  <div class="modal-content dashboard-modal">
+    <span class="close">&times;</span>
+
+    <h2 id="modalDeviceName">Device Dashboard</h2>
+
+    <div class="dashboard-grid">
+      <!-- Fence Voltage -->
+      <div class="dash-card">
+        <h4>FENCE VOLTAGE</h4>
+        <div class="big-value">10kV</div>
+        <small>Last Updated: 01:03</small>
+      </div>
+
+      <!-- Solar Power -->
+      <div class="dash-card">
+        <h4>Solar Power</h4>
+        <div class="meter-circle">00 W</div>
+      </div>
+
+      <!-- Battery Level -->
+      <div class="dash-card">
+        <h4>Battery Level</h4>
+        <div class="battery">
+          <div class="battery-fill" style="width:34%"></div>
+        </div>
+        <strong>34%</strong>
+      </div>
+
+      <!-- Battery Voltage -->
+      <div class="dash-card">
+        <h4>Battery Voltage</h4>
+        <div class="big-value">25.9 V</div>
+      </div>
+
+      <!-- Fence Status -->
+      <div class="dash-card center">
+        <h4>Status</h4>
+        <div class="status-circle on">ON</div>
+      </div>
+
+      <!-- Mode -->
+      <div class="dash-card center">
+        <h4>Mode</h4>
+        <div class="mode">AUTO</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     <script src="js/templatemo-crypto-script.js"></script>
+
+<script>
+  const modal = document.getElementById("deviceModal");
+  const closeBtn = document.querySelector(".close");
+  const modalDeviceName = document.getElementById("modalDeviceName");
+
+  document.querySelectorAll(".device-link").forEach(link => {
+    link.addEventListener("click", () => {
+    //   modalDeviceName.innerText = "Device : " + link.dataset.device;
+        modalDeviceName.innerText = "Device : " + link.dataset.device;
+      modal.style.display = "block";
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
 </body>
 </html>
