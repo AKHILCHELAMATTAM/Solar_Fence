@@ -277,7 +277,7 @@ body.auth-page {
 }
 
 .auth-form .form-input:focus {
-    box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.15);
+    /* box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.15); */
 }
 
 .input-icon {
